@@ -6,8 +6,9 @@ exports[`SearchForm renders correctly 1`] = `
     class="search-form"
   >
     <input
+      class="search-form__input"
       type="text"
-      value="Manchester"
+      value="Stub text"
     />
     <button
       type="submit"

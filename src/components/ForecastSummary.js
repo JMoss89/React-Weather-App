@@ -6,7 +6,7 @@ import "../styles/ForecastSummary.css";
 
 function ForecastSummary({ date, description, icon, temperature, onSelect }) {
   return (
-    <div className="forecast-summary">
+    <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__container">
         <div className="forecast-summary__container-1">
           <div className="forecast-summary__date">

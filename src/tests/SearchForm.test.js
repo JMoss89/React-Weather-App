@@ -1,10 +1,10 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import SearchForm from "../components/SearchForm";
 
 describe("SearchForm", () => {
   const validProps = {
-    searchText: "Manchester",
+    searchText: "Stub text",
     setSearchText: () => {},
     onSubmit: () => {},
   };
@@ -30,6 +30,6 @@ describe("SearchForm", () => {
       />
     );
 
-    expect(getByText("Search")).toBeInTheDocument;
+    expect(getByText("Search")).toBeInTheDocument();
   });
 });

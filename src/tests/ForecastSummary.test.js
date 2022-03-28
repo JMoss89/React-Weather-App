@@ -24,7 +24,6 @@ describe("ForecastSummary", () => {
         onSelect={validProps.onSelect}
       />
     );
-
     expect(asFragment()).toMatchSnapshot();
   });
 

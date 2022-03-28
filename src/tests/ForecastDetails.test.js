@@ -17,13 +17,13 @@ describe("ForecastDetails component", () => {
   };
   it("renders correctly", () => {
     const { asFragment } = render(
-      <ForecastDetails forecastDetail={validProps} />
-    );
+      <ForecastDetails forecast={validProps} />
+  );
 
     expect(asFragment()).toMatchSnapshot();
   });
   it("renders correct date", () => {
-    render(<ForecastDetails forecastDetail={validProps} />);
+    render(<ForecastDetails forecast={validProps} />);
     const dateElement = screen.getByText(/Mon 30th Apr/i);
 
     expect(dateElement).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe("ForecastDetails component", () => {
   });
 
   it("renders correct max temperature", () => {
-    render(<ForecastDetails forecastDetail={validProps} />);
+    render(<ForecastDetails forecast={validProps} />);
     const maxTempElement = screen.getByText(/23/i);
 
     expect(maxTempElement).toBeInTheDocument();
@@ -39,7 +39,7 @@ describe("ForecastDetails component", () => {
   });
 
   it("renders correct min temperature", () => {
-    render(<ForecastDetails forecastDetail={validProps} />);
+    render(<ForecastDetails forecast={validProps} />);
     const minTempElement = screen.getByText(/15/);
 
     expect(minTempElement).toBeInTheDocument();
@@ -47,7 +47,7 @@ describe("ForecastDetails component", () => {
   });
 
   it("renders correct humidity", () => {
-    render(<ForecastDetails forecastDetail={validProps} />);
+    render(<ForecastDetails forecast={validProps} />);
     const humidityElement = screen.getByText(/89%/i);
 
     expect(humidityElement).toBeInTheDocument();
@@ -55,7 +55,7 @@ describe("ForecastDetails component", () => {
   });
 
   it("renders correct wind", () => {
-    render(<ForecastDetails forecastDetail={validProps} />);
+    render(<ForecastDetails forecast={validProps} />);
     const windElement = screen.getByText(/12mph N/i);
 
     expect(windElement).toBeInTheDocument();
