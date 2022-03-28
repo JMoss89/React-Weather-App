@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ForecastSummaries from "../components/ForecastSummaries";
 
 describe("ForecastSummaries", () => {
@@ -7,7 +7,7 @@ describe("ForecastSummaries", () => {
     {
       date: 1111111,
       description: "Stub description 1",
-      icon: 602,
+      icon: "800",
       temperature: {
         max: 22,
         min: 12,
@@ -16,7 +16,7 @@ describe("ForecastSummaries", () => {
     {
       date: 2222222,
       description: "Stub description2",
-      icon: 800,
+      icon: "602",
       temperature: {
         max: 24,
         min: 13,
@@ -26,6 +26,7 @@ describe("ForecastSummaries", () => {
   const onForecastSelect = () => {};
 
   it("renders correctly", () => {
+    // eslint-disable-next-line react/react-in-jsx-scope
     const { asFragment } = render(
       <ForecastSummaries
         forecasts={validProps}
@@ -37,14 +38,13 @@ describe("ForecastSummaries", () => {
   });
 
   it("renders the correct number of ForecastSummary instances", () => {
-    render(
+    const { getAllByTestId } = render(
       <ForecastSummaries
         forecasts={validProps}
         onForecastSelect={onForecastSelect}
       />
     );
-    const forecastSummaryInstances = screen.getAllByTestId("forecast-summary");
 
-    expect(forecastSummaryInstances).toHaveLength(2);
+    expect(getAllByTestId("forecast-summary")).toHaveLength(2);
   });
 });
