@@ -1,11 +1,22 @@
-# Getting Started with Create React App
+# React Weather App ☀️ 🌦 ❄️
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+A weather forecasting app built using React, which allows users to access 5 days weather forecast of any valid cities they want to check. Data is fetched from the Manchester Codes weather API. 
 
+React Testing Library and Jest are used for project testing. 
+
+## Installation
+
+- Clone this repo
+- `cd` in to repo
+- Run `npm install`
+- Run `npm start` to start the project
+- Run `npm test` to run the tests
+
+## Getting Started with Create React App
 ### `npm start`
 
 Runs the app in the development mode.\
