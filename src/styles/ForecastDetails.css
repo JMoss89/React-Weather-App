@@ -1,0 +1,23 @@
+.forecast-details {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  
+  .forecast-details__date {
+    font-weight: 700;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .forecast-details {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .forecast-details {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

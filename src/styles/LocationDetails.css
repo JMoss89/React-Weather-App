@@ -1,0 +1,15 @@
+.location-details {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .location-details {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .location-details {
+    font-size: 60px;
+  }
+}
